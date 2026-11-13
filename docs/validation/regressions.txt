@@ -1,0 +1,126 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+ACTOR_CHECK PASS attack faces map centre
+ACTOR_CHECK PASS sprint travels with physical controller
+ACTOR_CHECK PASS movement emits footstep events
+ACTOR_CHECK PASS sprint crouch starts slide
+ACTOR_CHECK PASS slide lowers hitbox
+ACTOR_CHECK PASS stand restores hitbox
+ACTOR_CHECK PASS rifle hits and eliminates perceived-space target
+ACTOR_CHECK PASS death is reported once
+ACTOR_CHECK PASS combat statistics recorded
+ACTOR_CHECK PASS dead target ignores repeated damage
+ACTOR_CHECK PASS interaction blocks firing
+ACTOR_CHECK PASS reload consumes reserve and refills magazine
+ACTOR_CHECK PASS pistol switching uses separate magazine
+ACTOR_CHECK PASS invisibility preserves collision hitbox
+ACTOR_CHECK PASS mantle climbs actual low obstacle without teleport
+ACTOR_CHECK PASS full-height wall rejects mantle and movement
+ACTOR_CHECK PASS tutorial target remains alive for interactive lessons
+ACTOR_RESULT failures=0
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+PASS · A silent stationary enemy starts unknown
+PASS · Ping accepts an available source
+PASS · Cooldown rejects repeated ping
+PASS · LOS ping confirms an immobile enemy
+PASS · Confirmed position is the body origin
+PASS · Ping exposes its emitter symmetrically
+PASS · Confirmed observer drives enemy reconstruction
+PASS · Expired signal stops live tracking
+PASS · Old acoustic footprints remain frozen
+PASS · Old memories expire
+PASS · A nearby occluded ping produces approximate evidence
+PASS · An opaque wall never grants a silhouette
+PASS · An occluded estimate has stable uncertainty
+PASS · Sprint is audible inside its nominal range
+PASS · Nearby reload cannot remain invisible
+PASS · Remote bullet impacts do not reveal the shooter
+PASS · Decoy can be placed on unobstructed floor
+PASS · A gadget is limited to one use per slot
+PASS · A decoy supplies ordinary sprint evidence, with no fake flag
+PASS · Thorn places a reachable trap
+PASS · An enemy crossing the armed thorn consumes it
+PASS · A triggered trap confirms in LOS even for stationary/crouched actors
+PASS · Veil deploys
+PASS · Veil jams enemy observations in its radius
+PASS · Friendly observations are not jammed
+PASS · A device can be destroyed by damage
+PASS · A defender can deploy the stone ear
+PASS · The stone ear detects a silent infiltrator
+PASS · A defender can deploy the broken bell
+PASS · The broken bell marks without damage
+PASS · A defender can deploy the crystal choir
+PASS · The choir actively scans silent enemies
+PASS · A trap beside a wall can be placed on valid ground
+PASS · A solid wall blocks trap triggering from another room
+PASS · Team callouts preserve uncertainty and never grant remote silhouettes
+PASS · Round cleanup clears acoustic events, memories and gadgets
+ACOUSTIC_REGRESSIONS: 36 assertions; 0 failures
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+PASS 1v1 all actor spawns are walkable
+PASS 1v1 every spawn reaches every active exit
+PASS 1v1 all simplified routes preserve wall clearance
+PASS 2v2 all actor spawns are walkable
+PASS 2v2 every spawn reaches every active exit
+PASS 2v2 all simplified routes preserve wall clearance
+PASS 3v3 all actor spawns are walkable
+PASS 3v3 every spawn reaches every active exit
+PASS 3v3 all simplified routes preserve wall clearance
+PASS navigation routes around an opaque wall
+PASS smoothed path never cuts inflated wall corners
+PASS solid wall cell is non walkable
+PASS outside world is non walkable
+PASS open floor is walkable
+PASS near defender reacts to public extraction alarm
+PASS alarm provides gate objective only
+PASS extraction alarm does not create an enemy contact
+PASS defender pings the activated gate
+PASS ordinary false acoustic contact attracts investigation
+PASS bot never fires precisely at an unconfirmed contact
+PASS unconfirmed search is bounded and returns to objective
+PASS confirmed acoustic silhouette enters combat
+PASS first confirmed acquisition respects reaction delay
+PASS reaction elapsed and aligned visible contact permits combat
+PASS one assigned responder prevents team convergence
+PASS ally hold order changes objective
+PASS attacker inside exit holds extraction command
+AI TEST FAILURES: 0
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+AUDIO_TESTS: 6 checks, 0 failures
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+MATCH_TESTS: 50 checks, 0 failures
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+PASS tutorial · director created only in guided tutorial
+PASS tutorial · stage 0 positions a living, reachable target
+PASS tutorial · stage 1 positions a living, reachable target
+PASS tutorial · stage 2 positions a living, reachable target
+PASS tutorial · stage 3 positions a living, reachable target
+PASS tutorial · stage 4 positions a living, reachable target
+PASS tutorial · shooting exercise acoustically reconstructs its target
+PASS tutorial · guided target never fires
+PASS tutorial · human remains unharmed in all first exercises
+PASS tutorial · ping triggers against stationary tutorial target
+PASS tutorial · stationary training target receives a real acoustic contact
+PASS tutorial · training target survives at 25 HP
+PASS tutorial · training target damage cannot create a kill or objective score
+PASS tutorial · real decoy has a valid tutorial placement
+PASS tutorial · decoy deployment consumes actual slot
+PASS tutorial · trainer investigates a perceived false sound
+PASS tutorial · false signal causes actual target movement
+PASS tutorial · real thorn has a valid tutorial placement
+PASS tutorial · thorn deployment consumes actual secondary slot
+PASS tutorial · director walks the target into a real triggered trap
+PASS tutorial · extraction exercise exposes a depth-tested guide
+PASS tutorial · guided extraction uses normal match rules
+PASS tutorial · tutorial completion persists in local profile state
+PASS tutorial · training bot never fired during entire scenario
+PASS tutorial · return to menu removes director and training entities
+TUTORIAL_TEST_RESULT 25/25 passed
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org

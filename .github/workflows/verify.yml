@@ -1,0 +1,45 @@
+name: Verify and export SONAR
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  godot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install official Godot 4.6.3
+        shell: bash
+        run: |
+          mkdir -p .tools
+          curl --fail --location --retry 3 --silent --show-error https://github.com/godotengine/godot-builds/releases/download/4.6.3-stable/Godot_v4.6.3-stable_linux.x86_64.zip -o .tools/godot.zip
+          unzip -q .tools/godot.zip -d .tools
+          chmod +x .tools/Godot_v4.6.3-stable_linux.x86_64
+          echo "$PWD/.tools" >> "$GITHUB_PATH"
+          ln -s Godot_v4.6.3-stable_linux.x86_64 .tools/godot
+      - name: Regression suites and deterministic full match
+        run: tools/check.sh
+      - name: Install desktop export templates
+        run: python3 tools/install_export_templates.py
+      - name: Build Linux and Windows
+        run: |
+          mkdir -p builds/linux builds/windows
+          godot --headless --path . --export-release 'Linux x86_64'
+          godot --headless --path . --export-release 'Windows x86_64'
+          cp LICENSE docs/GODOT_THIRD_PARTY_NOTICES.txt builds/linux/
+          cp LICENSE docs/GODOT_THIRD_PARTY_NOTICES.txt builds/windows/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SONAR-desktop-builds
+          path: builds/
+          retention-days: 14
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: SONAR-test-results
+          path: .godot/test-logs/
+          retention-days: 14

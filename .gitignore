@@ -1,0 +1,10 @@
+.godot/
+builds/
+*.tmp
+*.log
+.DS_Store
+.env
+.env.*
+work/
+__pycache__/
+.tools/

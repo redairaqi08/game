@@ -1,0 +1,554 @@
+{
+	"balanced_roles": true,
+	"difficulty": 1,
+	"minimum_observed_fps": 60.0,
+	"rounds": [
+		{
+			"actors": [
+				{
+					"alive": true,
+					"extracted": true,
+					"id": 0,
+					"stats": {
+						"damage": 100.0,
+						"extractions": 1,
+						"gadgets": 1,
+						"hits": 4,
+						"kills": 1,
+						"pings": 1,
+						"shots": 9
+					},
+					"team": 0
+				},
+				{
+					"alive": true,
+					"extracted": true,
+					"id": 1,
+					"stats": {
+						"damage": 100.0,
+						"extractions": 1,
+						"gadgets": 2,
+						"hits": 4,
+						"kills": 1,
+						"pings": 1,
+						"shots": 5
+					},
+					"team": 0
+				},
+				{
+					"alive": false,
+					"extracted": false,
+					"id": 10,
+					"stats": {
+						"damage": 50.0,
+						"extractions": 0,
+						"gadgets": 1,
+						"hits": 2,
+						"kills": 0,
+						"pings": 1,
+						"shots": 6
+					},
+					"team": 1
+				},
+				{
+					"alive": false,
+					"extracted": false,
+					"id": 11,
+					"stats": {
+						"damage": 0.0,
+						"extractions": 0,
+						"gadgets": 1,
+						"hits": 0,
+						"kills": 0,
+						"pings": 1,
+						"shots": 0
+					},
+					"team": 1
+				}
+			],
+			"attacker_team": 0,
+			"bots": [
+				{
+					"state": "EXTRACT",
+					"stuck_count": 0,
+					"telemetry": {
+						"engagements": 1,
+						"fire_commands": 12,
+						"gadget_commands": 1,
+						"intercepts": 0,
+						"investigations": 2,
+						"ping_commands": 1,
+						"repaths": 9,
+						"searches_abandoned": 0,
+						"speculative_shots": 2,
+						"unstucks": 0
+					}
+				},
+				{
+					"state": "EXTRACT",
+					"stuck_count": 0,
+					"telemetry": {
+						"engagements": 1,
+						"fire_commands": 5,
+						"gadget_commands": 2,
+						"intercepts": 0,
+						"investigations": 2,
+						"ping_commands": 1,
+						"repaths": 10,
+						"searches_abandoned": 0,
+						"speculative_shots": 2,
+						"unstucks": 0
+					}
+				},
+				{
+					"state": "TAKE_COVER",
+					"stuck_count": 0,
+					"telemetry": {
+						"engagements": 1,
+						"fire_commands": 8,
+						"gadget_commands": 1,
+						"intercepts": 0,
+						"investigations": 1,
+						"ping_commands": 1,
+						"repaths": 6,
+						"searches_abandoned": 0,
+						"speculative_shots": 2,
+						"unstucks": 0
+					}
+				},
+				{
+					"state": "INVESTIGATE",
+					"stuck_count": 0,
+					"telemetry": {
+						"engagements": 0,
+						"fire_commands": 0,
+						"gadget_commands": 1,
+						"intercepts": 0,
+						"investigations": 1,
+						"ping_commands": 1,
+						"repaths": 5,
+						"searches_abandoned": 0,
+						"speculative_shots": 0,
+						"unstucks": 0
+					}
+				}
+			],
+			"duration": 19.8333333333335,
+			"extracted": 2,
+			"round": 1,
+			"stopped": 0
+		},
+		{
+			"actors": [
+				{
+					"alive": true,
+					"extracted": false,
+					"id": 0,
+					"stats": {
+						"damage": 175.0,
+						"extractions": 0,
+						"gadgets": 1,
+						"hits": 6,
+						"kills": 2,
+						"pings": 2,
+						"shots": 15
+					},
+					"team": 0
+				},
+				{
+					"alive": false,
+					"extracted": false,
+					"id": 1,
+					"stats": {
+						"damage": 25.0,
+						"extractions": 0,
+						"gadgets": 1,
+						"hits": 1,
+						"kills": 0,
+						"pings": 1,
+						"shots": 1
+					},
+					"team": 0
+				},
+				{
+					"alive": false,
+					"extracted": false,
+					"id": 10,
+					"stats": {
+						"damage": 50.0,
+						"extractions": 0,
+						"gadgets": 1,
+						"hits": 2,
+						"kills": 0,
+						"pings": 1,
+						"shots": 9
+					},
+					"team": 1
+				},
+				{
+					"alive": false,
+					"extracted": false,
+					"id": 11,
+					"stats": {
+						"damage": 100.0,
+						"extractions": 0,
+						"gadgets": 1,
+						"hits": 4,
+						"kills": 1,
+						"pings": 1,
+						"shots": 5
+					},
+					"team": 1
+				}
+			],
+			"attacker_team": 1,
+			"bots": [
+				{
+					"state": "ENGAGE",
+					"stuck_count": 0,
+					"telemetry": {
+						"engagements": 2,
+						"fire_commands": 20,
+						"gadget_commands": 1,
+						"intercepts": 0,
+						"investigations": 2,
+						"ping_commands": 2,
+						"repaths": 10,
+						"searches_abandoned": 0,
+						"speculative_shots": 2,
+						"unstucks": 0
+					}
+				},
+				{
+					"state": "TAKE_COVER",
+					"stuck_count": 1,
+					"telemetry": {
+						"engagements": 2,
+						"fire_commands": 1,
+						"gadget_commands": 1,
+						"intercepts": 0,
+						"investigations": 2,
+						"ping_commands": 1,
+						"repaths": 9,
+						"searches_abandoned": 0,
+						"speculative_shots": 0,
+						"unstucks": 1
+					}
+				},
+				{
+					"state": "ENGAGE",
+					"stuck_count": 0,
+					"telemetry": {
+						"engagements": 1,
+						"fire_commands": 15,
+						"gadget_commands": 1,
+						"intercepts": 0,
+						"investigations": 1,
+						"ping_commands": 1,
+						"repaths": 5,
+						"searches_abandoned": 0,
+						"speculative_shots": 0,
+						"unstucks": 0
+					}
+				},
+				{
+					"state": "INVESTIGATE",
+					"stuck_count": 0,
+					"telemetry": {
+						"engagements": 2,
+						"fire_commands": 2,
+						"gadget_commands": 1,
+						"intercepts": 0,
+						"investigations": 4,
+						"ping_commands": 1,
+						"repaths": 12,
+						"searches_abandoned": 0,
+						"speculative_shots": 4,
+						"unstucks": 0
+					}
+				}
+			],
+			"duration": 15.216666666667,
+			"extracted": 0,
+			"round": 2,
+			"stopped": 2
+		},
+		{
+			"actors": [
+				{
+					"alive": false,
+					"extracted": false,
+					"id": 0,
+					"stats": {
+						"damage": 125.0,
+						"extractions": 0,
+						"gadgets": 2,
+						"hits": 5,
+						"kills": 1,
+						"pings": 2,
+						"shots": 9
+					},
+					"team": 0
+				},
+				{
+					"alive": false,
+					"extracted": false,
+					"id": 1,
+					"stats": {
+						"damage": 50.0,
+						"extractions": 0,
+						"gadgets": 1,
+						"hits": 2,
+						"kills": 0,
+						"pings": 1,
+						"shots": 2
+					},
+					"team": 0
+				},
+				{
+					"alive": false,
+					"extracted": false,
+					"id": 10,
+					"stats": {
+						"damage": 25.0,
+						"extractions": 0,
+						"gadgets": 1,
+						"hits": 1,
+						"kills": 0,
+						"pings": 1,
+						"shots": 1
+					},
+					"team": 1
+				},
+				{
+					"alive": true,
+					"extracted": false,
+					"id": 11,
+					"stats": {
+						"damage": 175.0,
+						"extractions": 0,
+						"gadgets": 2,
+						"hits": 7,
+						"kills": 2,
+						"pings": 2,
+						"shots": 11
+					},
+					"team": 1
+				}
+			],
+			"attacker_team": 0,
+			"bots": [
+				{
+					"state": "ENGAGE",
+					"stuck_count": 1,
+					"telemetry": {
+						"engagements": 3,
+						"fire_commands": 5,
+						"gadget_commands": 2,
+						"intercepts": 0,
+						"investigations": 4,
+						"ping_commands": 2,
+						"repaths": 16,
+						"searches_abandoned": 0,
+						"speculative_shots": 8,
+						"unstucks": 1
+					}
+				},
+				{
+					"state": "TAKE_COVER",
+					"stuck_count": 0,
+					"telemetry": {
+						"engagements": 1,
+						"fire_commands": 2,
+						"gadget_commands": 1,
+						"intercepts": 0,
+						"investigations": 1,
+						"ping_commands": 1,
+						"repaths": 7,
+						"searches_abandoned": 0,
+						"speculative_shots": 1,
+						"unstucks": 0
+					}
+				},
+				{
+					"state": "TAKE_COVER",
+					"stuck_count": 0,
+					"telemetry": {
+						"engagements": 1,
+						"fire_commands": 0,
+						"gadget_commands": 1,
+						"intercepts": 0,
+						"investigations": 1,
+						"ping_commands": 1,
+						"repaths": 9,
+						"searches_abandoned": 0,
+						"speculative_shots": 1,
+						"unstucks": 0
+					}
+				},
+				{
+					"state": "ENGAGE",
+					"stuck_count": 0,
+					"telemetry": {
+						"engagements": 4,
+						"fire_commands": 10,
+						"gadget_commands": 2,
+						"intercepts": 3,
+						"investigations": 2,
+						"ping_commands": 2,
+						"repaths": 20,
+						"searches_abandoned": 0,
+						"speculative_shots": 7,
+						"unstucks": 0
+					}
+				}
+			],
+			"duration": 25.9166666666665,
+			"extracted": 0,
+			"round": 3,
+			"stopped": 2
+		},
+		{
+			"actors": [
+				{
+					"alive": false,
+					"extracted": false,
+					"id": 0,
+					"stats": {
+						"damage": 75.0,
+						"extractions": 0,
+						"gadgets": 1,
+						"hits": 3,
+						"kills": 0,
+						"pings": 1,
+						"shots": 7
+					},
+					"team": 0
+				},
+				{
+					"alive": false,
+					"extracted": false,
+					"id": 1,
+					"stats": {
+						"damage": 0.0,
+						"extractions": 0,
+						"gadgets": 1,
+						"hits": 0,
+						"kills": 0,
+						"pings": 1,
+						"shots": 0
+					},
+					"team": 0
+				},
+				{
+					"alive": true,
+					"extracted": true,
+					"id": 10,
+					"stats": {
+						"damage": 100.0,
+						"extractions": 1,
+						"gadgets": 2,
+						"hits": 3,
+						"kills": 1,
+						"pings": 1,
+						"shots": 7
+					},
+					"team": 1
+				},
+				{
+					"alive": true,
+					"extracted": true,
+					"id": 11,
+					"stats": {
+						"damage": 100.0,
+						"extractions": 1,
+						"gadgets": 1,
+						"hits": 4,
+						"kills": 1,
+						"pings": 1,
+						"shots": 5
+					},
+					"team": 1
+				}
+			],
+			"attacker_team": 1,
+			"bots": [
+				{
+					"state": "TAKE_COVER",
+					"stuck_count": 0,
+					"telemetry": {
+						"engagements": 1,
+						"fire_commands": 9,
+						"gadget_commands": 1,
+						"intercepts": 0,
+						"investigations": 1,
+						"ping_commands": 1,
+						"repaths": 7,
+						"searches_abandoned": 0,
+						"speculative_shots": 1,
+						"unstucks": 0
+					}
+				},
+				{
+					"state": "TAKE_COVER",
+					"stuck_count": 0,
+					"telemetry": {
+						"engagements": 1,
+						"fire_commands": 0,
+						"gadget_commands": 1,
+						"intercepts": 0,
+						"investigations": 1,
+						"ping_commands": 1,
+						"repaths": 5,
+						"searches_abandoned": 0,
+						"speculative_shots": 0,
+						"unstucks": 0
+					}
+				},
+				{
+					"state": "EXTRACT",
+					"stuck_count": 0,
+					"telemetry": {
+						"engagements": 1,
+						"fire_commands": 8,
+						"gadget_commands": 2,
+						"intercepts": 0,
+						"investigations": 2,
+						"ping_commands": 1,
+						"repaths": 12,
+						"searches_abandoned": 0,
+						"speculative_shots": 2,
+						"unstucks": 0
+					}
+				},
+				{
+					"state": "EXTRACT",
+					"stuck_count": 1,
+					"telemetry": {
+						"engagements": 1,
+						"fire_commands": 5,
+						"gadget_commands": 1,
+						"intercepts": 0,
+						"investigations": 2,
+						"ping_commands": 1,
+						"repaths": 10,
+						"searches_abandoned": 0,
+						"speculative_shots": 2,
+						"unstucks": 1
+					}
+				}
+			],
+			"duration": 21.0000000000001,
+			"extracted": 2,
+			"round": 4,
+			"stopped": 0
+		}
+	],
+	"scores": [
+		400,
+		400
+	],
+	"seed": 27013,
+	"team_size": 2,
+	"version": "0.1.0"
+}

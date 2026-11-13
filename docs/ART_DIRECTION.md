@@ -1,0 +1,9 @@
+# Direction artistique — jalon jouable
+
+Dark fantasy minérale souterraine. La pierre sculptée gris vert, les nervures de cuivre et les inscriptions ivoire structurent un sanctuaire ancien. Le turquoise est réservé aux cristaux et archives froides ; l'ambre marque les cloches et portes. Les émissions restent modérées pour préserver la distinction entre environnement et reconstructions acoustiques.
+
+La géométrie est originale et produite dans le moteur : colonnes à socles et chapiteaux, nervures facettées de voûtes, cloches coniques, statues à silhouette Vesperide, machines à tores et cristaux prismatiques. Un grand cristal suspendu, animé lentement, identifie le centre de la carte. Les murs présentent des corniches et socles ; des courses de dallage et incrustations guident les itinéraires. Les portes combinent arcs monumentaux, cristaux, inscriptions et sceaux de sol animés.
+
+Le shader de pierre emploie une texture procédurale 3D déterministe, des veines et variations de grain. L'eau possède une animation de rides ; elle reste peu profonde et traversable. Deux éclairages directionnels et six sources locales assurent la lisibilité sans dépendre d'une scène entièrement obscure. Les inscriptions respectent le test de profondeur, restent fixes sur les murs et ont été réduites après inspection d’une capture FPS pour conserver le centre de visée lisible. Une voûte de caverne irrégulière et une géologie périphérique ferment le décor au-dessus des constructions. Les volumes statiques sont fusionnés par matériau pour limiter les appels de rendu.
+
+Les modèles ne revendiquent pas un pipeline de sculpture ou de texturation AAA. La végétation, les plafonds lointains et certains appareils restent stylisés et demandent une passe artistique supplémentaire. La passerelle et les balcons ne sont pas encore jouables. Les niveaux de qualité doivent conserver toutes les informations perceptives.
