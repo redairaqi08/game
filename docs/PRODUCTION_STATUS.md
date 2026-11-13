@@ -26,6 +26,8 @@ Six suites automatisées totalisent **161 vérifications réussies** : acteur17,
 
 Des parties bot contre bot complètes ont été exécutées dans les trois formats. Des captures natives du menu, des paramètres, du HUD et de la carte ont été inspectées ; les grandes inscriptions qui gênaient la visée ont été corrigées. Les sources et outils de génération sont inclus. Exports desktop Linux/Windows configurés et produits ; Linux est exécuté dans cet environnement, Windows reste à tester sur sa plateforme.
 
+La publication GitHub a été tentée mais refusée403 par Git et par le connecteur. Le dépôt distant est toujours vide. Archives sources/binaires et bundle Git sont préparés localement ; voir `DELIVERY_STATUS.md` pour rétablir l’accès et reprendre la publication. Aucune CI distante ou release publique n’est déclarée exécutée.
+
 ## Limites prioritaires
 
 1. **Rythme et équilibre :** plusieurs duels bot contre bot se résolvent en moins de10secondes. Les bots peuvent être trop efficaces à courte portée. Des sidesteps de récupération ont été observés ; aucune preuve de navigation infaillible ou d'équilibre compétitif n'est revendiquée.
