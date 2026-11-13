@@ -1,0 +1,67 @@
+name: Publish verified alpha archives
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing alpha tag
+        required: true
+        default: v0.1.0-alpha
+      build_run_id:
+        description: Successful Verify and export SONAR run
+        required: true
+        default: '43499812589'
+permissions:
+  contents: write
+  actions: read
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: ${{ inputs.tag }}
+      BUILD_RUN_ID: ${{ inputs.build_run_id }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag }}
+          fetch-depth: 0
+      - name: Verify successful build uses the same game sources
+        run: |
+          python3 - <<'PY'
+          import json, os, subprocess
+          assert os.environ['RELEASE_TAG'] == 'v0.1.0-alpha', 'Packaging tool version must match release tag'
+          endpoint = 'repos/{}/actions/runs/{}'.format(os.environ['GITHUB_REPOSITORY'], os.environ['BUILD_RUN_ID'])
+          run = json.loads(subprocess.check_output(['gh', 'api', endpoint], text=True))
+          assert run['conclusion'] == 'success', 'Build run must be successful'
+          assert run['name'] == 'Verify and export SONAR', 'Unexpected source workflow'
+          subprocess.run(['git', 'diff', '--exit-code', run['head_sha'], 'HEAD', '--', 'scripts', 'shaders', 'scenes', 'assets', 'config', 'project.godot', 'export_presets.cfg'], check=True)
+          PY
+      - uses: actions/download-artifact@v4
+        with:
+          name: SONAR-desktop-builds
+          path: builds/
+          run-id: ${{ inputs.build_run_id }}
+          github-token: ${{ github.token }}
+      - name: Package binaries, source and complete Git history
+        run: |
+          chmod +x builds/linux/sonar.x86_64
+          python3 tools/package_release.py
+          git archive --format=zip --prefix=SONAR-source/ -o builds/release/SONAR-0.1.0-alpha-source.zip HEAD
+          git update-ref refs/heads/main HEAD
+          git bundle create builds/release/SONAR-0.1.0-alpha.git.bundle main
+          git bundle verify builds/release/SONAR-0.1.0-alpha.git.bundle
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, zipfile
+          folder = Path('builds/release')
+          for file in folder.glob('*.zip'):
+              with zipfile.ZipFile(file) as archive:
+                  assert archive.testzip() is None, file
+          lines = [hashlib.sha256(file.read_bytes()).hexdigest() + '  ' + file.name for file in sorted(folder.iterdir()) if file.is_file() and file.name != 'SHA256SUMS.txt']
+          (folder / 'SHA256SUMS.txt').write_text('\n'.join(lines) + '\n')
+          PY
+      - name: Upload complete archives and publish prerelease
+        run: |
+          gh release upload "$RELEASE_TAG" builds/release/* --repo "$GITHUB_REPOSITORY"
+          gh release edit "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --draft=false --prerelease
