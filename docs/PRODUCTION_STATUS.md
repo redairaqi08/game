@@ -26,7 +26,7 @@ Six suites automatisées totalisent **161 vérifications réussies** : acteur17,
 
 Des parties bot contre bot complètes ont été exécutées dans les trois formats. Des captures natives du menu, des paramètres, du HUD et de la carte ont été inspectées ; les grandes inscriptions qui gênaient la visée ont été corrigées. Les sources et outils de génération sont inclus. Exports desktop Linux/Windows configurés et produits ; Linux est exécuté dans cet environnement, Windows reste à tester sur sa plateforme.
 
-La publication GitHub a été tentée mais refusée403 par Git et par le connecteur. Le dépôt distant est toujours vide. Archives sources/binaires et bundle Git sont préparés localement ; voir `DELIVERY_STATUS.md` pour rétablir l’accès et reprendre la publication. Aucune CI distante ou release publique n’est déclarée exécutée.
+Le refus d’écriture403 initial est résolu : les sources sont maintenant publiées sur `redairaqi08/game`, branche `main`, avec leur historique. Les archives Linux/Windows, sources et bundle Git sont regroupées dans la préversion `v0.1.0-alpha` ; voir `DELIVERY_STATUS.md`. Le workflow distant a démarré ; son état à jour est visible dans GitHub Actions.
 
 ## Limites prioritaires
 
